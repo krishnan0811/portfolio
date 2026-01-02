@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Krishna — ECE student, Web Developer, AI/ML enthusiast. Projects, skills & contact." />
+  <title>Krishna — Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="img/favicon.ico">
+
+<!-- Styles & Script -->
+  <link rel="stylesheet" href="css/6_style.css" />
+  <script defer src="js/6_script.js"></script>
+
+  <!-- Social Preview -->
+  <meta property="og:title" content="Krishna — Portfolio" />
+  <meta property="og:description" content="ECE final year | Web Dev | AI & ML" />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#" class="brand">Krishna<span class="dot">.</span></a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#stack">Tech Stack</a>
+        <a href="#languages">Languages</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#connect">Connect</a>
+      </nav>
+
+      <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-inner">
+      <h1 id="hero-title">This is Krishna, <span class="about-me"></span></h1>
+      <p class="subtitle">Welcome to my world!</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#projects"><i class="fas fa-briefcase"></i> View Projects</a>
+        <a class="btn ghost" href="#contact"><i class="fas fa-paper-plane"></i> Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+ <!-- About -->
+<section id="about" class="panel">
+  <div class="container about-card">
+    <img src="img/Krishna.webp" alt="Krishna profile photo" class="profile-img"> 
+    <h2>Krishna</h2>
+    <p>Hello! I’m a final-year ECE student who loves building web apps and working on AI & ML projects.</p>
+  </div>
+</section>
+
+
+
+  <!-- Skills (soft skills list) -->
+  <section id="skills" class="panel">
+    <div class="container">
+      <h2>My Technical Skills</h2>
+      <ul class="chip-list">
+        <li class="chip">Web Development</li>
+        <li class="chip">Artificial Intelligence</li>
+        <li class="chip">Data Analyst</li>
+        <li class="chip">Machine Learning</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Tech stack icons (marquee) -->
+  <section id="stack" class="panel">
+    <div class="container">
+      <h2>Tech Stack</h2>
+      <div class="horizontal-scroll" aria-label="Logos of technologies I use">
+        <div class="icon-container" role="list">
+          <img role="listitem" src="icon/1.png" alt="Tech icon 1" />
+          <img role="listitem" src="icon/2.png" alt="Tech icon 2" />
+          <img role="listitem" src="icon/3.png" alt="Tech icon 3" />
+          <img role="listitem" src="icon/4.png" alt="Tech icon 4" />
+          <img role="listitem" src="icon/5.webp" alt="Tech icon 5" />
+          <img role="listitem" src="icon/6.webp" alt="Tech icon 6" />
+          <img role="listitem" src="icon/7.svg" alt="Tech icon 7" />
+          <img role="listitem" src="icon/8.png" alt="Tech icon 8" />
+          <img role="listitem" src="icon/9.png" alt="Tech icon 9" />
+          <img role="listitem" src="icon/10.png" alt="Tech icon 10" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programming languages (animated bars) -->
+  <section id="languages" class="panel">
+    <div class="container">
+      <h2>Programming Languages</h2>
+
+      <div class="skill">
+        <p>JavaScript</p>
+        <div class="progress-bar" data-progress="60"></div>
+      </div>
+
+      <div class="skill">
+        <p>HTML</p>
+        <div class="progress-bar" data-progress="70"></div>
+      </div>
+
+      <div class="skill">
+        <p>CSS</p>
+        <div class="progress-bar" data-progress="70"></div>
+      </div>
+      <div class="skill">
+        <p>Pyhon</p>
+        <div class="progress-bar" data-progress="80"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="panel">
+    <div class="container">
+      <h2>My Projects</h2>
+      <p class="muted">A few highlights from my work.</p>
+
+      <div class="grid projects-grid">
+        <article class="project-card">
+          <img src="img/1.jpg" alt="Screenshot:project 1" />
+          <div class="card-body">
+            <h3>project 1</h3>
+            <p>Short description of project 1.</p>
+            <a class="btn small">Know More</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="img/2.png" alt="Screenshot: Project 2" />
+          <div class="card-body">
+            <h3>Project 2</h3>
+            <p>Short description of project 2.</p>
+            <a class="btn small">Know More</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="img/3.png" alt="Screenshot: Project 3" />
+          <div class="card-body">
+            <h3>Project 3</h3>
+            <p>Short description of project 3.</p>
+            <a  class="btn small">Know More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact form -->
+  <section id="contact" class="panel">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form class="contact-form" aria-label="Contact form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your Name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="your@email.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Say hello..." rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn primary wide">Send Message</button>
+      </form>
+      
+    </div>
+  </section>
+
+  <!-- Connect -->
+  <section id="connect" class="panel">
+    <div class="container">
+      <h2>Contact Information</h2>
+      <p>Let's connect!</p>
+      <div class="socials">
+        <a class="icon-link email" href="mailto:kriskrishna0816@gmail.com" aria-label="Email Krishna"><i class="fas fa-envelope"></i></a>
+        <a class="icon-link linkedin" href="https://www.linkedin.com/in/krishnan08" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Krishna. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
