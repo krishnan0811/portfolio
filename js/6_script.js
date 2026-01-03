@@ -6,7 +6,7 @@ function changeAboutMeText(){
     "a Machine Learning Engineer"
   ]; // from your original list, cleaned up wording  :contentReference[oaicite:2]{index=2}
 
-  const typingSpeed = 100, eraseSpeed = 50, pauseTime = 1500;
+  const typingSpeed = 90, eraseSpeed = 80, pauseTime = 2000;
   const el = document.querySelector(".about-me");
   let i = 0, j = 0, deleting = false;
 
@@ -87,5 +87,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
   setupNav();
   setYear();
 });
+
 
 
