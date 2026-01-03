@@ -3,7 +3,7 @@ function changeAboutMeText(){
   const aboutMeTexts = [
     "an ECE Student ",
     "a Data Analytics",
-    "Machine Learning Engineer"
+    "a Machine Learning Engineer"
   ]; // from your original list, cleaned up wording  :contentReference[oaicite:2]{index=2}
 
   const typingSpeed = 100, eraseSpeed = 50, pauseTime = 1500;
@@ -87,4 +87,5 @@ document.addEventListener("DOMContentLoaded", ()=>{
   setupNav();
   setYear();
 });
+
 
