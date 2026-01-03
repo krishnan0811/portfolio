@@ -1,10 +1,9 @@
 // ---- Typewriter for "about-me" ----
 function changeAboutMeText(){
   const aboutMeTexts = [
-    "an ECE student ",
-    "Passinate About New Technology",
-    "a Data Scientist",
-    "a Full-Stack Web Developer"
+    "an ECE Student ",
+    "a Data Analytics",
+    "Machine Learning Engineer"
   ]; // from your original list, cleaned up wording  :contentReference[oaicite:2]{index=2}
 
   const typingSpeed = 100, eraseSpeed = 50, pauseTime = 1500;
@@ -88,3 +87,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
   setupNav();
   setYear();
 });
+
