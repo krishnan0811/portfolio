@@ -2,7 +2,7 @@
 function changeAboutMeText(){
   const aboutMeTexts = [
     "An Entry-Level Data Analyst ",
-    "Skilled in Python, SQL % Data Visualization",
+    "Skilled in Python, SQL & Data Visualization",
     "Passionate About Data-Driven Insights",
     "Aspiring Machine Learning Engineer"
   ]; // from your original list, cleaned up wording  :contentReference[oaicite:2]{index=2}
@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   setupNav();
   setYear();
 });
+
 
 
 
