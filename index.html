@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Krishna — ECE student, Web Developer, AI/ML enthusiast. Projects, skills & contact." />
   <title>Krishna — Portfolio</title>
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -35,7 +39,7 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#stack">Tech Stack</a>
-        <a href="#languages">Languages</a>
+        <a href="#Data Analytics Skills">Data Analytics Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
         <a href="#connect">Connect</a>
@@ -64,7 +68,7 @@
   <div class="container about-card">
     <img src="img/Krishna.webp" alt="Krishna profile photo" class="profile-img"> 
     <h2>Krishna</h2>
-    <p>Hello! I’m a final-year ECE student who enjoys working with data, analytics, and machine leraning, turing raw data into meaingful insights</p>
+    <p>Hello! I’m passionate about data analytics and enjoy transforming raw data into meaningful insights through analysis and visualization.</p>
   </div>
 </section>
 
@@ -72,17 +76,21 @@
 
   <!-- Skills (soft skills list) -->
   <section id="skills" class="panel">
-    <div class="container">
-      <h2>My Technical Skills</h2>
-      <ul class="chip-list">
-        <li class="chip">Data Analyst</li>
-        <li class="chip">Machine Learning Fundamentals</li>
-        <li class="chip">Python</li>
-        
-      </ul>
-    </div>
-  </section>
+  <div class="container">
+    <h2>My Technical Skills</h2>
 
+    <ul class="chip-list">
+      <li class="chip">Python</li>
+      <li class="chip">SQL</li>
+      <li class="chip">Power BI</li>
+      <li class="chip">Tableau</li>
+      <li class="chip">Excel</li>
+      <li class="chip">Data Visualization</li>
+      <li class="chip">Data Cleaning</li>
+    </ul>
+
+  </div>
+</section>
   <!-- Tech stack icons (marquee) -->
   <section id="stack" class="panel">
     <div class="container">
@@ -93,37 +101,57 @@
           <img role="listitem" src="icon/2.png" alt="Tech icon 2" />
           <img role="listitem" src="icon/3.png" alt="Tech icon 3" />
           <img role="listitem" src="icon/4.png" alt="Tech icon 4" />
-          <img role="listitem" src="icon/5.webp" alt="Tech icon 5" />
-          <img role="listitem" src="icon/6.webp" alt="Tech icon 6" />
-          <img role="listitem" src="icon/7.svg" alt="Tech icon 7" />
-          <img role="listitem" src="icon/8.png" alt="Tech icon 8" />
-          <img role="listitem" src="icon/9.png" alt="Tech icon 9" />
-          <img role="listitem" src="icon/10.png" alt="Tech icon 10" />
+          <img role="listitem" src="icon/5.png" alt="Tech icon 5" />
+          <img role="listitem" src="icon/6.png" alt="Tech icon 6" />
+          <img role="listitem" src="icon/7.png" alt="Tech icon 7" />
         </div>
       </div>
     </div>
-  </section>
-
+  </section>      
   <!-- Programming languages (animated bars) -->
-  <section id="languages" class="panel">
+  <section id="Data Analytics Skills" class="panel">
     <div class="container">
-      <h2>Programming Languages</h2>
+      <h2>Data Analytics Skills</h2>
 
-      <div class="skill">
-        <p>Python</p>
-        <div class="progress-bar" data-progress="80"></div>
-      </div>
+      <div class="skills-container">
 
-      <div class="skill">
-        <p>HTML</p>
-        <div class="progress-bar" data-progress="50"></div>
-      </div>
-      
-      <div class="skill">
-        <p>Jva Script</p>
-        <div class="progress-bar" data-progress="50"></div>
-      </div>
-    </div>
+
+
+<div class="skill">
+  <p>Python</p>
+  <div class="progress">
+    <div class="progress-bar" style="width: 85%"></div>
+  </div>
+</div>
+
+<div class="skill">
+  <p>SQL</p>
+  <div class="progress">
+    <div class="progress-bar" style="width:80%"></div>
+  </div>
+</div>
+
+<div class="skill">
+  <p>Power BI</p>
+  <div class="progress">
+    <div class="progress-bar" style="width:85%"></div>
+  </div>
+</div>
+
+<div class="skill">
+  <p>Tableau</p>
+  <div class="progress">
+    <div class="progress-bar" style="width:75%"></div>
+  </div>
+</div>
+
+<div class="skill">
+  <p>Excel</p>
+  <div class="progress">
+    <div class="progress-bar" style="width:80%"></div>
+  </div>
+</div>
+</div>
   </section>
 
   <!-- Projects -->
@@ -131,14 +159,14 @@
     <div class="container">
       <h2>My Projects</h2>
       <p class="muted">A few highlights from my work.</p>
-
+      
       <div class="grid projects-grid">
         <article class="project-card">
-          <img src="img/1.jpg" alt="Screenshot:project 1" />
+          <img src="img/Project_1.png" alt="Screenshot:project 1" />
           <div class="card-body">
-            <h3>project 1</h3>
-            <p>Short description of project 1.</p>
-            <a class="btn small">Know More</a>
+            <h3>Smartphone Market Analysis Dashboard (Power BI)</h3>
+            <p>Interactive Power BI dashboard analyzing smartphone features, pricing trends, and brand performance..</p>
+            <a href="smartphone-project.html" class="btn">Know More</a>
           </div>
         </article>
 
@@ -209,5 +237,3 @@
   </footer>
 </body>
 </html>
-
-
