@@ -1,13 +1,13 @@
 // ---- Typewriter for "about-me" ----
 function changeAboutMeText(){
   const aboutMeTexts = [
-    "An Entry-Level Data Analyst ",
-    "Skilled in Python, SQL & Data Visualization",
-    "Passionate About Data-Driven Insights",
-    "Aspiring Machine Learning Engineer"
+    "An Aspiring Data Analyst",
+"Skilled in SQL, Python & Power BI",
+"Creating Interactive Data Dashboards",
+"Transforming Data into Business Insights"
   ]; // from your original list, cleaned up wording  :contentReference[oaicite:2]{index=2}
 
-  const typingSpeed = 90, eraseSpeed = 80, pauseTime = 2000;
+  const typingSpeed = 100, eraseSpeed = 50, pauseTime = 1500;
   const el = document.querySelector(".about-me");
   let i = 0, j = 0, deleting = false;
 
@@ -88,9 +88,3 @@ document.addEventListener("DOMContentLoaded", ()=>{
   setupNav();
   setYear();
 });
-
-
-
-
-
-
