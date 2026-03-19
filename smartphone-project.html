@@ -43,43 +43,73 @@
         p { line-height: 1.7; }
         ul { line-height: 1.9; padding-left: 20px; }
 
-        .project-resources {
+        /* ────────────────────────────────────────
+           Modern Project Resources Card
+        ──────────────────────────────────────── */
+        .resources-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            padding: 32px 24px;
             text-align: center;
+            margin: 0 auto 40px;
+            max-width: 720px;
         }
 
-        .project-links { 
-            display: flex; 
-            flex-wrap: wrap; 
-            gap: 16px; 
-            justify-content: center;
-            margin-top: 20px;
+        .resources-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            color: #1a1a1a;
         }
 
-        .project-btn { 
-            display: inline-flex; 
-            align-items: center; 
+        .resources-card p {
+            color: #555;
+            margin-bottom: 28px;
+            font-size: 1.05rem;
+        }
+
+        .resources-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
             justify-content: center;
-            gap: 10px; 
-            padding: 14px 28px; 
-            color: white; 
-            text-decoration: none; 
-            font-weight: 600; 
-            border-radius: 8px; 
-            font-size: 1.05rem; 
-            transition: all 0.3s ease;
+        }
+
+        .resources-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 32px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            border-radius: 8px;
+            transition: all 0.25s ease;
             min-width: 220px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
         }
 
-        .btn-github { background: #24292e; }
-        .btn-report  { background: #4285F4; }
+        .btn-github {
+            background: #24292e;
+        }
 
-        .project-btn:hover,
-        .project-btn:active {
+        .btn-report {
+            background: #0066cc;
+        }
+
+        .resources-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
+        .resources-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+
+        /* Rest of your styles (dashboard, lightbox, back btn, etc.) */
         .dashboard-grid { 
             display: flex; 
             flex-wrap: wrap; 
@@ -152,27 +182,16 @@
             transform: translateY(-2px);
         }
 
-        /* ────────────────────────────────────────
-           Mobile fixes
-        ──────────────────────────────────────── */
+        /* Mobile adjustments */
         @media (max-width: 768px) { 
             .container { padding: 25px 15px; } 
             h1 { font-size: 2rem; } 
             .section { padding: 22px; }
-            .project-links { 
-                flex-direction: column; 
-                align-items: center; 
-                gap: 16px;
-            }
-            .project-btn { 
-                width: 100%; 
-                max-width: 340px; 
-                padding: 16px 24px;
-                font-size: 1.1rem;
-            }
+            .resources-card { padding: 24px 16px; }
+            .resources-buttons { flex-direction: column; align-items: center; gap: 16px; }
+            .resources-btn { width: 100%; max-width: 340px; padding: 16px 24px; }
             .dashboard-grid { gap: 40px; }
             .dashboard-img { max-height: 55vh; }
-            .caption { font-size: 0.94rem; }
         }
 
         @media (min-width: 769px) {
@@ -195,13 +214,15 @@
         <p>This project analyzes smartphone specifications including price, RAM capacity, battery capacity, rear camera resolution, and screen resolution. The dataset was cleaned using Power Query and visualized using interactive Power BI dashboards.</p>
     </div>
 
-    <div class="section project-resources">
+    <!-- Modern Resources Card -->
+    <div class="section">
         <h2>Project Resources</h2>
-        <div class="project-links">
-            <a href="https://github.com/krishnan0811/smartphone_analysis.git" target="_blank" class="project-btn btn-github">
-                <i class="fab fa-github"></i> GitHub
+        <p>Access the complete source code and detailed documentation:</p>
+        <div class="resources-buttons">
+            <a href="https://github.com/krishnan0811/smartphone_analysis.git" target="_blank" class="resources-btn btn-github">
+                <i class="fab fa-github"></i> View Source Code
             </a>
-            <a href="https://drive.google.com/file/d/1rvADbZ5xGough4q1s5Qmu5LM_OBGugZX/preview" target="_blank" class="project-btn btn-report">
+            <a href="https://drive.google.com/file/d/1rvADbZ5xGough4q1s5Qmu5LM_OBGugZX/preview" target="_blank" class="resources-btn btn-report">
                 <i class="fas fa-file-pdf"></i> View Project Report
             </a>
         </div>
