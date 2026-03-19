@@ -222,15 +222,130 @@ background: linear-gradient(90deg,#6a11cb,#ff6a00);
   width: 60%;
   margin: auto;
 }
-.progress{
-background:#e5e5e5;
-height:20px;   /* increase this */
-border-radius:20px;
-overflow:hidden;
+.center-button-wrapper {
+  text-align: center;
+  margin: 2.5rem 0;
 }
 
-.progress-bar{
-height:20px;   /* same height */
-border-radius:20px;
-background: linear-gradient(90deg,#6a11cb,#ff6a00);
+.center-button-wrapper .btn {
+  display: inline-block;
+  min-width: 220px;          /* makes it look balanced */
+  text-align: center;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.1rem;
+}
+
+/* If you want the button to feel more premium */
+.center-button-wrapper .btn-gradient {
+  background: linear-gradient(90deg, #7c3aed, #ea580c);
+  color: white;
+  border: none;
+  border-radius: 9999px;     /* very rounded */
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.center-button-wrapper .btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+}
+/* In css/6_style.css - add this */
+.icon-link.github {
+  background-color: #333;          /* GitHub black/dark */
+  color: white;
+}
+
+.icon-link.github:hover {
+  background-color: #24292e;
+  transform: translateY(-2px);
+}
+/* Certifications Section */
+.cert-grid {
+  display: grid;
+  grid-template-columns: 1fr;           /* 1 column on mobile */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .cert-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));  /* 2+ columns on larger screens */
+  }
+}
+
+.cert-card {
+  background: var(--card-bg, #fff);     /* use your dark/light mode var if you have */
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.cert-header {
+  margin-bottom: 1.2rem;
+}
+
+.cert-header h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.4rem;
+}
+
+.cert-institute {
+  font-weight: 600;
+  color: var(--primary, #6d28d9);      /* match your theme color */
+  display: block;
+}
+
+.cert-date {
+  font-size: 0.95rem;
+  color: #666;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.cert-details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+}
+
+.cert-details li {
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.cert-details li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary, #6d28d9);
+  font-weight: bold;
+}
+
+.cert-btn {
+  background: linear-gradient(90deg, #8b5cf6, #f97316);  /* your purple-orange theme */
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.cert-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+.cert-btn i {
+  margin-right: 8px;
 }
