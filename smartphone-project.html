@@ -43,27 +43,26 @@
         p { line-height: 1.7; }
         ul { line-height: 1.9; padding-left: 20px; }
 
-        /* ────────────────────────────────────────
-           Modern Project Resources Card
-        ──────────────────────────────────────── */
+        /* Project Resources Card - like screenshot */
         .resources-card {
             background: white;
             border-radius: 12px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-            padding: 32px 24px;
+            padding: 32px 28px;
             text-align: center;
             margin: 0 auto 40px;
-            max-width: 720px;
+            max-width: 800px;
         }
 
         .resources-card h2 {
-            font-size: 1.8rem;
+            font-size: 1.9rem;
+            color: #c0392b;           /* red/maroon heading like screenshot */
             margin-bottom: 12px;
-            color: #1a1a1a;
         }
 
         .resources-card p {
             color: #555;
+            font-style: italic;
             margin-bottom: 28px;
             font-size: 1.05rem;
         }
@@ -87,16 +86,16 @@
             color: white;
             border-radius: 8px;
             transition: all 0.25s ease;
-            min-width: 220px;
+            min-width: 240px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.12);
         }
 
         .btn-github {
-            background: #24292e;
+            background: #24292e;      /* dark GitHub black */
         }
 
         .btn-report {
-            background: #0066cc;
+            background: #0066cc;      /* strong blue */
         }
 
         .resources-btn:hover {
@@ -104,12 +103,7 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
-        .resources-btn:active {
-            transform: translateY(0);
-            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-        }
-
-        /* Rest of your styles (dashboard, lightbox, back btn, etc.) */
+        /* Rest of styles (dashboard, lightbox, back button) */
         .dashboard-grid { 
             display: flex; 
             flex-wrap: wrap; 
@@ -182,11 +176,10 @@
             transform: translateY(-2px);
         }
 
-        /* Mobile adjustments */
+        /* Mobile fixes */
         @media (max-width: 768px) { 
             .container { padding: 25px 15px; } 
             h1 { font-size: 2rem; } 
-            .section { padding: 22px; }
             .resources-card { padding: 24px 16px; }
             .resources-buttons { flex-direction: column; align-items: center; gap: 16px; }
             .resources-btn { width: 100%; max-width: 340px; padding: 16px 24px; }
@@ -214,11 +207,11 @@
         <p>This project analyzes smartphone specifications including price, RAM capacity, battery capacity, rear camera resolution, and screen resolution. The dataset was cleaned using Power Query and visualized using interactive Power BI dashboards.</p>
     </div>
 
-    <!-- Modern Resources Card -->
+    <!-- Project Resources Card (like your screenshot) -->
     <div class="section">
         <h2>Project Resources</h2>
         <p>Access the complete source code and detailed documentation:</p>
-        <div class="resources-buttons">
+        <div class="project-links">
             <a href="https://github.com/krishnan0811/smartphone_analysis.git" target="_blank" class="resources-btn btn-github">
                 <i class="fab fa-github"></i> View Source Code
             </a>
