@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accident Analysis Dashboard</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fb; color: #333; }
+        .header { background: #c0392b; color: white; padding: 40px 20px; text-align: center; position: relative; }
+        .container { width: 85%; max-width: 1100px; margin: auto; padding: 40px 20px; }
+        .section { background: white; padding: 30px; margin-bottom: 30px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        h1 { margin: 0; font-size: 2.4rem; }
+        h2 { color: #c0392b; margin-top: 0; }
+        p { line-height: 1.7; }
+        ul { line-height: 1.9; padding-left: 20px; }
+
+        .project-links { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.5rem; }
+        .project-btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; color: white; text-decoration: none; font-weight: 600; border-radius: 8px; transition: all 0.3s ease; font-size: 1.05rem; }
+
+        .btn-tableau { background: #1f77b4; }
+        .btn-tableau:hover { background: #155a8a; transform: translateY(-2px); }
+
+        .btn-github { background: #24292e; }
+        .btn-github:hover { background: #1a1e22; transform: translateY(-2px); }
+
+        .dashboard-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .dashboard-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: #c0392b;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <a href="index.html" class="back-btn" style="position:absolute; left:20px; top:50%; transform:translateY(-50%);">
+        ← Back to Portfolio
+    </a>
+
+    <h1>Accident Analysis Dashboard</h1>
+    <p>Tableau Data Analytics Project</p>
+</div>
+
+<div class="container">
+
+    <div class="section">
+        <h2>Project Overview</h2>
+        <p>
+            This project analyzes road accident data using Tableau to identify patterns 
+            based on time, weather, vehicle type, and road conditions. The dashboard 
+            helps in understanding key risk factors and improving road safety decisions.
+        </p>
+    </div>
+    <div class="section">
+        <h2>Project Resources</h2>
+        <p>Access the complete source code and detailed documentation:</p>
+        <div class="project-links">
+            <a href="https://github.com/krishnan0811/Accident-Analysis.git" class="project-btn btn-github" target="_blank">
+                <i class="fab fa-github"></i> View Source Code
+            <a href="https://drive.google.com/file/d/1Q1PNLrzO6Vjcs1mnPv72tv0d_OazCxym/view?usp=sharing" 
+   class="project-btn btn-tableau" target="_blank">
+    <i class="fas fa-file-pdf"></i> View Project Report
+</a>
+            </a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Project Features</h2>
+        <ul>
+            <li>State-wise accident analysis (Map)</li>
+            <li>Time-based accident trends</li>
+            <li>Weather condition analysis</li>
+            <li>Vehicle type distribution</li>
+            <li>Alcohol involvement insights</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Tools Used</h2>
+        <ul>
+            <li>Tableau</li>
+            <li>Data Visualization</li>
+            <li>Data Cleaning</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Project Preview</h2>
+        <img src="img/Tableau.png" class="dashboard-img" onclick="openImage(this.src)">
+        <p style="margin-top:15px; color:#555; line-height:1.6;">
+        This dashboard provides a comprehensive analysis of road accident data using interactive visualizations. 
+        It highlights accident patterns based on time, weather conditions, vehicle types, and road conditions. 
+        The dashboard also identifies high-risk areas and key contributing factors such as alcohol involvement, 
+        helping in better decision-making for improving road safety.
+    </p>
+    </div>
+
+    
+
+    <div style="text-align:center; padding:40px;">
+        <a href="index.html" class="back-btn">← Return to Portfolio</a>
+    </div>
+
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeImage()">
+    <img id="lightbox-img">
+</div>
+
+<script>
+function openImage(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+}
+
+function closeImage() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
