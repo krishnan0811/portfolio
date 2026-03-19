@@ -9,11 +9,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fb; color: #333; }
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            background: #f5f7fb; 
+            color: #333; 
+        }
 
-        .header { background: #1f3c88; color: white; padding: 30px 15px; text-align: center; }
+        .header { 
+            background: #1f3c88; 
+            color: white; 
+            padding: 30px 15px; 
+            text-align: center; 
+        }
 
-        .container { width: 85%; max-width: 1100px; margin: auto; padding: 40px 20px; }
+        .container { 
+            width: 85%; 
+            max-width: 1100px; 
+            margin: auto; 
+            padding: 40px 20px; 
+        }
 
         .section { 
             background: white; 
@@ -28,7 +43,13 @@
         p { line-height: 1.7; }
         ul { line-height: 1.9; padding-left: 20px; }
 
-        .project-links { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.5rem; }
+        .project-links { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 1.2rem; 
+            margin-top: 1.5rem; 
+            justify-content: center; 
+        }
 
         .project-btn { 
             display: inline-flex; 
@@ -47,95 +68,115 @@
         .btn-report { background: #4285F4; }
 
         .project-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
         }
 
-        .dashboard-grid { display: flex; flex-wrap: wrap; gap: 25px; margin-top: 25px; }
-        .dashboard-card { flex: 1; min-width: 320px; }
+        .dashboard-grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 28px; 
+            margin-top: 25px; 
+        }
+
+        .dashboard-card { 
+            flex: 1 1 100%;           /* full width on mobile */
+            min-width: 0;             /* prevents overflow */
+        }
 
         .dashboard-img { 
             width: 100%; 
+            max-height: 70vh;          /* ← key fix: limit height on mobile */
+            object-fit: contain;       /* keeps aspect ratio, no distortion */
             border-radius: 10px; 
             cursor: pointer; 
             transition: transform 0.4s ease, box-shadow 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+            background: #f8f9fa;       /* light bg if transparent parts */
+            border: 1px solid #e0e0e0;
         }
 
         .dashboard-img:hover { 
-            transform: scale(1.05); 
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
+            transform: scale(1.02); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.18); 
         }
 
-        .caption { margin-top: 12px; font-size: 0.95rem; color: #555; line-height: 1.5; }
+        .caption { 
+            margin-top: 14px; 
+            font-size: 0.97rem; 
+            color: #444; 
+            line-height: 1.5; 
+        }
 
         .lightbox { 
             display: none; 
             position: fixed; 
             top: 0; left: 0; 
             width: 100%; height: 100%; 
-            background: rgba(0,0,0,0.85); 
+            background: rgba(0,0,0,0.88); 
             justify-content: center; 
             align-items: center; 
             z-index: 1000; 
         }
 
-        .lightbox img { max-width: 92%; max-height: 92%; border-radius: 12px; }
+        .lightbox img { 
+            max-width: 96%; 
+            max-height: 94%; 
+            border-radius: 12px; 
+            object-fit: contain;
+        }
 
         .back-btn { 
             display: inline-flex; 
             align-items: center; 
             gap: 8px; 
-            padding: 12px 24px; 
+            padding: 14px 32px; 
             background: #1f3c88; 
             color: white; 
             text-decoration: none; 
             font-weight: 600; 
             border-radius: 8px; 
-            margin-bottom: 15px;
+            transition: all 0.3s ease;
         }
 
-        /* 🔥 ANIMATION */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s ease forwards;
+        .back-btn:hover {
+            background: #0f2556;
+            transform: translateY(-2px);
         }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
+        /* Mobile improvements */
         @media (max-width: 768px) { 
             .container { padding: 25px 15px; } 
             h1 { font-size: 2rem; } 
-            .project-links { flex-direction: column; align-items: center; }
-            .dashboard-grid { flex-direction: column; }
+            .section { padding: 22px; }
+            .dashboard-grid { gap: 40px; }               /* more breathing room */
+            .dashboard-img { max-height: 55vh; }         /* tighter on very small screens */
+            .caption { font-size: 0.94rem; }
+            .project-links { flex-direction: column; align-items: stretch; }
+            .project-btn { justify-content: center; width: 100%; max-width: 320px; }
+        }
+
+        @media (min-width: 769px) {
+            .dashboard-card { flex: 1 1 45%; }           /* two columns on larger screens */
         }
     </style>
 </head>
 
 <body>
 
-<div class="header fade-in">
-
-    
-
+<div class="header">
     <h1>Smartphone Market Analysis Dashboard</h1>
     <p>Power BI Data Analytics Project</p>
 </div>
 
 <div class="container">
 
-    <div class="section fade-in">
+    <div class="section">
         <h2>Project Overview</h2>
         <p>This project analyzes smartphone specifications including price, RAM capacity, battery capacity, rear camera resolution, and screen resolution. The dataset was cleaned using Power Query and visualized using interactive Power BI dashboards.</p>
     </div>
 
-    <div class="section fade-in">
+    <div class="section">
         <h2>Project Resources</h2>
         <div class="project-links">
             <a href="https://github.com/krishnan0811/smartphone_analysis.git" target="_blank" class="project-btn btn-github">
@@ -147,7 +188,7 @@
         </div>
     </div>
 
-    <div class="section fade-in">
+    <div class="section">
         <h2>Tools Used</h2>
         <ul>
             <li>Power BI</li>
@@ -157,7 +198,7 @@
         </ul>
     </div>
 
-    <div class="section fade-in">
+    <div class="section">
         <h2>Key Insights</h2>
         <ul>
             <li>Higher RAM → Higher price</li>
@@ -167,25 +208,25 @@
         </ul>
     </div>
 
-    <div class="section fade-in">
+    <div class="section">
         <h2>Dashboard Preview</h2>
 
         <div class="dashboard-grid">
 
             <div class="dashboard-card">
-                <img src="img/Output_1.png" class="dashboard-img" onclick="openImage(this.src)">
+                <img src="img/Output_1.png" class="dashboard-img" alt="Market Overview Dashboard" onclick="openImage(this.src)">
                 <p class="caption">Smartphone market overview with KPIs and trends.</p>
             </div>
 
             <div class="dashboard-card">
-                <img src="img/Output_2.png" class="dashboard-img" onclick="openImage(this.src)">
+                <img src="img/Output_2.png" class="dashboard-img" alt="Performance Comparison Dashboard" onclick="openImage(this.src)">
                 <p class="caption">Performance comparison dashboard.</p>
             </div>
 
         </div>
     </div>
 
-    <div style="text-align:center; padding:40px;">
+    <div style="text-align:center; padding:50px 20px 60px;">
         <a href="index.html" class="back-btn">← Return to Portfolio</a>
     </div>
 
@@ -193,7 +234,7 @@
 
 <!-- Lightbox -->
 <div id="lightbox" class="lightbox" onclick="closeImage()">
-    <img id="lightbox-img">
+    <img id="lightbox-img" alt="Enlarged dashboard screenshot">
 </div>
 
 <script>
