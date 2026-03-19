@@ -9,157 +9,120 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f5f7fb;
-            color: #333;
+        body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fb; color: #333; }
+
+        .header { background: #1f3c88; color: white; padding: 30px 15px; text-align: center; }
+
+        .container { width: 85%; max-width: 1100px; margin: auto; padding: 40px 20px; }
+
+        .section { 
+            background: white; 
+            padding: 30px; 
+            margin-bottom: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
         }
 
-        .header {
-            background: #1f3c88;
-            color: white;
-            padding: 30px 15px;
-            text-align: center;
+        h1 { margin: 0; font-size: 2.4rem; }
+        h2 { color: #1f3c88; margin-top: 0; }
+        p { line-height: 1.7; }
+        ul { line-height: 1.9; padding-left: 20px; }
+
+        .project-links { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.5rem; }
+
+        .project-btn { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 10px; 
+            padding: 14px 28px; 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 600; 
+            border-radius: 8px; 
+            font-size: 1.05rem; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .back-btn {
-            display: inline-block;
+        .btn-github { background: #24292e; }
+        .btn-report { background: #4285F4; }
+
+        .project-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .dashboard-grid { display: flex; flex-wrap: wrap; gap: 25px; margin-top: 25px; }
+        .dashboard-card { flex: 1; min-width: 320px; }
+
+        .dashboard-img { 
+            width: 100%; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .dashboard-img:hover { 
+            transform: scale(1.05); 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
+        }
+
+        .caption { margin-top: 12px; font-size: 0.95rem; color: #555; line-height: 1.5; }
+
+        .lightbox { 
+            display: none; 
+            position: fixed; 
+            top: 0; left: 0; 
+            width: 100%; height: 100%; 
+            background: rgba(0,0,0,0.85); 
+            justify-content: center; 
+            align-items: center; 
+            z-index: 1000; 
+        }
+
+        .lightbox img { max-width: 92%; max-height: 92%; border-radius: 12px; }
+
+        .back-btn { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px; 
+            padding: 12px 24px; 
+            background: #1f3c88; 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 600; 
+            border-radius: 8px; 
             margin-bottom: 15px;
-            padding: 10px 20px;
-            background: white;
-            color: #1f3c88;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
         }
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-            padding: 30px 15px;
+        /* 🔥 ANIMATION */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
         }
 
-        .section {
-            background: white;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        h2 {
-            color: #1f3c88;
-        }
-
-        p {
-            line-height: 1.7;
-        }
-
-        ul {
-            line-height: 1.9;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .project-btn {
-            padding: 12px 20px;
-            border-radius: 8px;
-            color: white;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-github {
-            background: #24292e;
-        }
-
-        .btn-report {
-            background: #4285F4;
-        }
-
-        .dashboard-grid {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .dashboard-card {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .dashboard-img {
-            width: 100%;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        .caption {
-            margin-top: 10px;
-            color: #555;
-        }
-
-        /* Lightbox */
-        .lightbox {
-            display: none;
-            position: fixed;
-            background: rgba(0,0,0,0.8);
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-        }
-
-        /* MOBILE FIX */
-        @media (max-width: 768px) {
-
-            h1 {
-                font-size: 1.5rem;
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
+        }
 
-            .container {
-                width: 95%;
-            }
-
-            .dashboard-grid {
-                flex-direction: column;
-            }
-
-            .project-links {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .back-btn {
-                display: block;
-                text-align: left;
-            }
+        @media (max-width: 768px) { 
+            .container { padding: 25px 15px; } 
+            h1 { font-size: 2rem; } 
+            .project-links { flex-direction: column; align-items: center; }
+            .dashboard-grid { flex-direction: column; }
         }
     </style>
 </head>
 
 <body>
 
-<div class="header">
+<div class="header fade-in">
+
+    
 
     <h1>Smartphone Market Analysis Dashboard</h1>
     <p>Power BI Data Analytics Project</p>
@@ -167,31 +130,24 @@
 
 <div class="container">
 
-    <div class="section">
+    <div class="section fade-in">
         <h2>Project Overview</h2>
-        <p>
-            This project analyzes smartphone specifications including price, RAM capacity, battery capacity, rear camera resolution, and screen resolution. 
-            The dataset was cleaned using Power Query and visualized using interactive Power BI dashboards.
-        </p>
+        <p>This project analyzes smartphone specifications including price, RAM capacity, battery capacity, rear camera resolution, and screen resolution. The dataset was cleaned using Power Query and visualized using interactive Power BI dashboards.</p>
     </div>
 
-    <div class="section">
+    <div class="section fade-in">
         <h2>Project Resources</h2>
         <div class="project-links">
-
             <a href="https://github.com/krishnan0811/smartphone_analysis.git" target="_blank" class="project-btn btn-github">
                 <i class="fab fa-github"></i> GitHub
             </a>
-
-            <!-- ✅ FIXED DRIVE LINK -->
             <a href="https://drive.google.com/file/d/1rvADbZ5xGough4q1s5Qmu5LM_OBGugZX/preview" target="_blank" class="project-btn btn-report">
-                <i class="fas fa-file-pdf"></i> View Report
+                <i class="fas fa-file-pdf"></i> View Project Report
             </a>
-
         </div>
     </div>
 
-    <div class="section">
+    <div class="section fade-in">
         <h2>Tools Used</h2>
         <ul>
             <li>Power BI</li>
@@ -201,7 +157,7 @@
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section fade-in">
         <h2>Key Insights</h2>
         <ul>
             <li>Higher RAM → Higher price</li>
@@ -211,23 +167,19 @@
         </ul>
     </div>
 
-    <div class="section">
+    <div class="section fade-in">
         <h2>Dashboard Preview</h2>
 
         <div class="dashboard-grid">
 
             <div class="dashboard-card">
                 <img src="img/Output_1.png" class="dashboard-img" onclick="openImage(this.src)">
-                <p class="caption">
-                    This dashboard analyzes smartphone market data with KPIs, OS distribution, and brand insights.
-                </p>
+                <p class="caption">Smartphone market overview with KPIs and trends.</p>
             </div>
 
             <div class="dashboard-card">
                 <img src="img/Output_2.png" class="dashboard-img" onclick="openImage(this.src)">
-                <p class="caption">
-                    This dashboard compares RAM, processor, battery, and brand performance.
-                </p>
+                <p class="caption">Performance comparison dashboard.</p>
             </div>
 
         </div>
@@ -240,7 +192,7 @@
 </div>
 
 <!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeImage()">
+<div id="lightbox" class="lightbox" onclick="closeImage()">
     <img id="lightbox-img">
 </div>
 
