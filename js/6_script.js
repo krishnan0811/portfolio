@@ -56,7 +56,7 @@ function setupDarkMode(){
     const root = document.documentElement;
     const dark = root.classList.toggle("dark-mode");
     btn.innerHTML = dark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-    localStorage.setItem("krishna-theme", dark ? "dark" : "light");
+    localStorage.setItem("krishnan-theme", dark ? "dark" : "light");
   });
 }
 
