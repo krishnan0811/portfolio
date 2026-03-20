@@ -349,3 +349,55 @@ background: linear-gradient(90deg,#6a11cb,#ff6a00);
 .cert-btn i {
   margin-right: 8px;
 }
+/* 🔥 DEFAULT (LIGHT MODE) → BLACK CARD */
+.cert-card {
+  background: #fff;          /* black */
+  color: #111;               /* white text */
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Text inside */
+.cert-card h3,
+.cert-card .cert-institute,
+.cert-card .cert-date,
+.cert-card li {
+   color: #222;
+}
+
+/* 🔥 DARK MODE → WHITE CARD */
+.dark-mode .cert-card {
+  background: #111;       /* white */
+  color: #fff;               /* black text */
+}
+
+/* Fix text inside dark mode */
+.dark-mode .cert-card h3,
+.dark-mode .cert-card .cert-institute,
+.dark-mode .cert-card .cert-date,
+.dark-mode .cert-card li {
+ 
+  color: #f1f1f1;
+}
+
+/* Tick icon color */
+.cert-details li::before {
+  color: #f97316; /* orange */
+}
+
+.dark-mode .cert-details li::before {
+  color: #7c3aed; /* purple */
+}
+
+/* Button stays same but slight tweak */
+.cert-btn {
+  background: linear-gradient(90deg, #8b5cf6, #f97316);
+  color: white;
+  border: none;
+}
+
+.dark-mode .cert-btn {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
