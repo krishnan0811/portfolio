@@ -36,7 +36,7 @@ Dashboard analyzing smartphone performance using metrics like RAM, battery, proc
 
 ##  Contact
  Email: kriskrishna0816@gmail.com  
- LinkedIn: (https://www.linkedin.com/in/krishnan08/)  
+ LinkedIn: https://www.linkedin.com/in/krishnan08/
 
 
 ---
