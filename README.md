@@ -32,13 +32,13 @@ Interactive dashboard analyzing road accident trends, including fatalities, weat
 ###  Smartphone Performance Analysis
 Dashboard analyzing smartphone performance using metrics like RAM, battery, processor, and brand comparisons.  
 
-🔗 [View Project](your-link-here)
+🔗 [View Project](https://github.com/krishnan0811/smartphone_analysis.git)
 
 ---
 
 ##  Contact
  Email: kriskrishna0816@gmail.com  
- LinkedIn: (add your link)  
+ LinkedIn: (https://www.linkedin.com/in/krishnan08/)  
 
 ---
 
