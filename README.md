@@ -25,7 +25,7 @@ I have hands-on experience in building interactive dashboards and working with d
 ###  Accident Analysis Dashboard
 Interactive dashboard analyzing road accident trends, including fatalities, weather conditions, vehicle involvement, and time-based patterns.  
 
-🔗 [View Project](your-link-here)
+🔗 [View Project](https://github.com/krishnan0811/Accident-Analysis.git)
 
 ---
 
